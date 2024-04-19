@@ -38,18 +38,19 @@ class GlobalLogger:
         print(f"[{self.__get_log_level()}] - {message}")
 
 
-logger1 = GlobalLogger()
-logger1.log("This is an info message.")
-logger1.message("This in an info message.")
-print(logger1["salat"])
-logger2 = GlobalLogger()
-logger2.log("This is an error message.")
-logger2.message("This is an error message.")
-logger1.log("This message also shows as an error.")
-logger1.message("This message also shows as an error.")
-print(logger2["salat"])
+if __name__ == "__main__":
+    logger1 = GlobalLogger()
+    logger1.log("This is an info message.")
+    logger1.message("This in an info message.")
+    print(logger1["salat"])
+    logger2 = GlobalLogger()
+    logger2.log("This is an error message.")
+    logger2.message("This is an error message.")
+    logger1.log("This message also shows as an error.")
+    logger1.message("This message also shows as an error.")
+    print(logger2["salat"])
 
-myLogger = GlobalLogger()
-myLogger.message("No onions!")
+    myLogger = GlobalLogger()
+    myLogger.message("No onions!")
 
-print(myLogger["salat"])
+    print(myLogger["salat"])
